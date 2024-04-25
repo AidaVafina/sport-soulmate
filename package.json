@@ -12,7 +12,9 @@
     "@types/react-dom": "^18.2.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "sass": "^1.75.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -21,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch": "sass --watch src/styles:src/styles --style compressed"
+    "watch": "sass --watch src/styles:src/styles --style compressed",
+    "sass": "sass  src/components/main_page/header/headerr.sass src/components/main_page/header/headerr.css && sass src/components/main_page/news_fragment/NewsStyle.sass src/components/main_page/news_fragment/NewsStyle.css"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +43,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1"
   }
 }
