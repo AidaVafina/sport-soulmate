@@ -21,6 +21,5 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String role;
-
+    private String role = "ROLE_USER"; // Значение по умолчанию
 }
