@@ -1,18 +1,16 @@
 package org.example.ssmbackend.entity;
 
-//import jakarta.persistence.*;
+import jakarta.persistence.*;
 import lombok.Data;
-
-import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false)
     private String email;
 
@@ -23,5 +21,5 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String role = "ROLE_USER"; // Значение по умолчанию
+    private String role = "ROLE_USER";
 }

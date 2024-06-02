@@ -1,5 +1,8 @@
 package org.example.ssmbackend.service;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.example.ssmbackend.entity.User;
 import org.example.ssmbackend.repository.UserRepository;
 import org.example.ssmbackend.security.CustomUserDetails;
@@ -13,6 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class UserService implements UserDetailsService {
 
     @Autowired

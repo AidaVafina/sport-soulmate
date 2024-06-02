@@ -1,12 +1,11 @@
 package org.example.ssmbackend;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "org.example.ssmbackend.chat.repository")
 public class SsmBackendApplication {
 
     public static void main(String[] args) {

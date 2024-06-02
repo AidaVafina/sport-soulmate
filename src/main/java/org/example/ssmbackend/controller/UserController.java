@@ -1,5 +1,6 @@
 package org.example.ssmbackend.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.example.ssmbackend.dto.LoginDto;
 import org.example.ssmbackend.entity.User;
 import org.example.ssmbackend.repository.UserRepository;
@@ -15,8 +16,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
+@RequiredArgsConstructor
 public class UserController {
-
     @Autowired
     private UserRepository userRepository;
 
@@ -48,7 +49,6 @@ public class UserController {
         }
     }
 
-    @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userRepository.findAll();
         return ResponseEntity.ok(users);
