@@ -19,8 +19,8 @@ public class RequestController {
     private ChatUserRepository userRepository;
 
     @GetMapping("/requests")
-    public List<Request> getRequests() {
-        return requestRepository.findAll();
+    public List<Request> getRequests(@RequestParam String email) {
+        return requestRepository.findByTo(email);
     }
 
     @PostMapping("/requests")
