@@ -34,7 +34,7 @@ public class RegistrationController {
             user.setEmail(email);
             user.setName(name);
             user.setPassword(password);
-            user.setRole("ROLE_USER"); // Установим значение поля `role` явно
+            user.setRole("ROLE_USER");
             if (userService.saveUser(user)) {
                 System.out.println("GOOD");
             } else {

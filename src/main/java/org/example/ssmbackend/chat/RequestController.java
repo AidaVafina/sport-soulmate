@@ -25,6 +25,11 @@ public class RequestController {
 
     @PostMapping("/requests")
     public ResponseEntity<Request> createRequest(@RequestBody Request request) {
+        Optional<User> user = userRepository.findByEmail(request.getTo());
+        if (!user.isPresent()) {
+            return ResponseEntity.status(404).body(null);
+        }
+
         Request savedRequest = requestRepository.save(request);
         return ResponseEntity.ok(savedRequest);
     }
