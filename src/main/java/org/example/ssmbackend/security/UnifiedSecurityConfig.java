@@ -20,11 +20,11 @@ public class UnifiedSecurityConfig {
         http
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .anyRequest().permitAll() // Allow access to all endpoints
+                                .anyRequest().permitAll()
                 )
-                .csrf(csrf -> csrf.disable()) // Disable CSRF protection
-                .formLogin(Customizer.withDefaults()) // Disable form login
-                .logout(Customizer.withDefaults()); // Disable logout functionality
+                .csrf(csrf -> csrf.disable())
+                .formLogin(Customizer.withDefaults())
+                .logout(Customizer.withDefaults());
 
         return http.build();
     }
