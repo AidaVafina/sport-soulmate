@@ -42,4 +42,8 @@ public class UserService implements UserDetailsService {
         }
         return new CustomUserDetails(user.get());
     }
+
+    public Optional<User> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }
